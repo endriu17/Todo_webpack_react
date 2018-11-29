@@ -1,11 +1,11 @@
 # Webpack and React
 
-Todo app
+## Todo app
 
-## To run 
+To run: 
 
 `npm install`
-
+and
 `npm run start`
 
 
