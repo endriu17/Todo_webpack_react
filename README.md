@@ -1,3 +1,11 @@
-https://endriu17.github.io/webpack_20_5/.
+# Webpack and React
 
-https://github.com/endriu17/webpack_20_5/blob/master/build/index.html
+Todo app
+
+## To run 
+
+`npm install`
+
+`npm run start`
+
+
