@@ -1,29 +1,47 @@
-import React from "react";
-import style from "./App.css";
+import React, { Component } from 'react';
+import TodoList from '../components/TodoList'
+import TodoForm from '../components/TodoForm'
+import Title from '../components/Title'
+import style from './App.css';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: []
-    };
+class App extends Component {
+  state = {
+    todos: [{
+      id: 1,
+          text: 'clean room'
+      }, {
+      id: 2,
+          text: 'wash the dishes'
+      }, {
+      id: 3,
+          text: 'feed my cat'
+      }]
   }
-  addTodo(val) {
-    const todo = {
-      text: val,
-      id: uuid.v4()
-    };
-    const data = [...this.state.data, todo];
-    this.setState({data});
+
+  deleteTodo = (id) => {
+    const todos = this.state.todos.filter(todo => {
+      return todo.id !== id
+    });
+    this.setState({
+      todos
+    });
   }
-  removeTodo(id) {
-    const remainder = this.state.data.filter(todo => todo.id !== id);
-    this.setState({data: remainder});
+  
+  addTodo = (todo) => {
+    todo.id = Math.random();
+    let todos = [...this.state.todos, todo];
+    this.setState({
+      todos
+    });
   }
+
   render() {
     return (
-      <div className={style.TodoApp}>
-        Tutaj pojawią się komponenty naszej aplikacji
+      <div className={style. TodoApp}>
+        <Title />
+        <p className={style. HeaderLabel}>(add things to do or delete them after they are done...)</p>
+        <TodoList todos={this.state.todos} deleteTodo={this.deleteTodo} />
+        <TodoForm addTodo={this.addTodo} />
       </div>
     );
   }
