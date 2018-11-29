@@ -9,5 +9,5 @@ and
 `npm run start`
 
 
-https://endriu17.github.io/webpack_20/.
+https://endriu17.github.io/webpack_20/
 
