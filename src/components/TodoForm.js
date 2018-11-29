@@ -3,18 +3,18 @@ import style from '../containers/App.css';
 
 class TodoForm extends Component {
   state = {
-    content: ''
+    text: ''
   }
   handleChange = (e) => {
     this.setState({
-      content: e.target.value
+      text: e.target.value
     });
   }
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.addTodo(this.state);
     this.setState({
-      content: ''
+      text: ''
     })
   }
   render() {

@@ -51,7 +51,7 @@ input {
     background: #eee;
     font-size: 26px;
     outline: none;
-    padding: 5px;
+    padding-bottom: 10px;
 }
 
 form label {
