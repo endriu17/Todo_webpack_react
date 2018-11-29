@@ -9,6 +9,4 @@ and
 `npm run start`
 
 
-## Site preview: 
-
-https://endriu17.github.io/webpack_20/
+### Preview: https://endriu17.github.io/webpack_20/
