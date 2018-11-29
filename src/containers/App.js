@@ -3,6 +3,7 @@ import TodoList from '../components/TodoList'
 import TodoForm from '../components/TodoForm'
 import Title from '../components/Title'
 import style from './App.css';
+import { hot } from 'react-hot-loader';
 
 class App extends Component {
   state = {
@@ -47,4 +48,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default hot(module)(App);
